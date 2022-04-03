@@ -1,6 +1,18 @@
-(define-public python-pathpy4
+(define-module (my-channel pathpy)
+  #:use-module (gnu packages tls)
+  #:use-module (gnu packages gnupg)
+  #:use-module (gnu packages guile)
+  #:use-module (gnu packages guile-xyz)
+  #:use-module (gnu packages pkg-config)
+  #:use-module (guix packages)
+  #:use-module (guix download)
+  #:use-module (guix build-system gnu)
+  #:use-module ((guix licenses) #:prefix license:))
+
+
+(define-public pathpy-pathpy4
   (package
-    (name "python-pathpy4")
+    (name "pathpy-pathpy4")
     (version "4.0.0")
     (source
      (origin
